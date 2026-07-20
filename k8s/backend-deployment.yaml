@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: hrms-backend
+  namespace: hrms
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: hrms-backend
+
+  template:
+    metadata:
+      labels:
+        app: hrms-backend
+
+    spec:
+      containers:
+      - name: hrms-backend
+
+        image: 930664225702.dkr.ecr.us-east-1.amazonaws.com/hrms-backend:latest
+
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 8080
+
+        env:
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: hrms-secret
+              key: DB_USERNAME
+
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: hrms-secret
+              key: DB_PASSWORD
+
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
