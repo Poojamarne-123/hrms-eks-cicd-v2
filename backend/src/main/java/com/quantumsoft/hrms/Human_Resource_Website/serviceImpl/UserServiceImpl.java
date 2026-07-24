@@ -83,7 +83,11 @@ public class UserServiceImpl implements UserService {
                 + "Please log in and change your password after first login.\n\n"
                 + "Regards,\nHRMS Team");
 
-        mailSender.send(message);
+        if (mailSender != null) {
+            mailSender.send(message);
+        } else {
+            System.out.println("Mail sender not configured. Skipping email.");
+        }
     }
 
     @Override
