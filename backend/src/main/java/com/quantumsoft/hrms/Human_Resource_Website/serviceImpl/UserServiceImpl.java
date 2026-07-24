@@ -211,7 +211,11 @@ public class UserServiceImpl implements UserService {
             message.setSubject("Your HRMS OTP Code");
             message.setText("Your OTP is: " + otp + "\nIt is valid for 5 minutes.");
 
-            mailSender.send(message);
+            if (mailSender != null) {
+                mailSender.send(message);
+            } else {
+                System.out.println("Mail sender not configured. Skipping email.");
+            }
     }
 
     @Override
