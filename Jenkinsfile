@@ -26,5 +26,16 @@ pipeline {
                 }
             }
         }
+        stage('Build Backend Image') {
+            steps {
+                sh 'docker build -t hrms-backend ./backend'
+            }
+        }
+
+        stage('Build Frontend Image') {
+            steps {
+                sh 'docker build -t hrms-frontend ./frontend'
+            }
+        }
     }
 }
