@@ -50,5 +50,16 @@ pipeline {
                 '''
             }
         }
+        stage('Push Images') {
+            steps {
+                sh '''
+                docker tag hrms-backend:latest $ECR_REGISTRY/hrms-backend:latest
+                docker push $ECR_REGISTRY/hrms-backend:latest
+
+                docker tag hrms-frontend:latest $ECR_REGISTRY/hrms-frontend:latest
+                docker push $ECR_REGISTRY/hrms-frontend:latest
+                '''
+            }
+        }
     }
 }
