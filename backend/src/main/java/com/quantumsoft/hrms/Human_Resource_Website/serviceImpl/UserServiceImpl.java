@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private AuditLogService auditLogService;
 
-    @Autowired
+    @Autowired(required = false)
     private JavaMailSender mailSender;
 
     @Autowired
