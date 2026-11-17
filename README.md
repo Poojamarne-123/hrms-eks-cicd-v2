@@ -8,7 +8,11 @@ The application is containerized using Docker and deployed on Amazon Elastic Kub
 Jenkins is used to automate the CI/CD pipeline for application build and deployment.
 
 Application Features
+
 Employee information management
+
 Salary management
+
 Leave management
+
 Payment details management
