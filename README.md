@@ -17,6 +17,7 @@ Leave management
 
 Payment details management
 
+
 Architecture Explanation
 
 Developer pushes application code to GitHub.
