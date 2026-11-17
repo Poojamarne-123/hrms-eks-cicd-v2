@@ -259,7 +259,6 @@ Through this project, I gained practical experience in:
 ## Future Enhancements
 
 -   Integrate SonarQube for code quality analysis.
--   Implement Trivy for container image vulnerability scanning.
 -   Configure Prometheus and Grafana for monitoring.
 -   Introduce Helm charts for Kubernetes deployments.
 -   Improve application security and deployment automation.
@@ -276,8 +275,6 @@ and Kubernetes orchestration.
 
 ------------------------------------------------------------------------
 
-**Note:** This README describes the intended project workflow. Verify
-the architecture and listed components against the actual repository
-files and deployed AWS resources before publishing. Do not commit
+
 passwords, access keys, tokens, or other secrets.
 
