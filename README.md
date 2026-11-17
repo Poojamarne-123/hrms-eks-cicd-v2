@@ -1,5 +1,7 @@
 HRMS Application Deployment on AWS EKS using DevOps
+
 Project Overview
+
 This project demonstrates the deployment of a full-stack Human Resource Management System (HRMS) application on AWS using DevOps tools and technologies.
 The HRMS application helps organizations manage employee information, salary details, leave requests, and payment information.
 The application is containerized using Docker and deployed on Amazon Elastic Kubernetes Service (EKS).
